@@ -10,7 +10,6 @@
 		BA6E9BB52B16169300B4F439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB42B16169300B4F439 /* AppDelegate.swift */; };
 		BA6E9BB72B16169300B4F439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */; };
 		BA6E9BB92B16169300B4F439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB82B16169300B4F439 /* ViewController.swift */; };
-		BA6E9BBC2B16169300B4F439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BBA2B16169300B4F439 /* Main.storyboard */; };
 		BA6E9BBE2B16169400B4F439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BBD2B16169400B4F439 /* Assets.xcassets */; };
 		BA6E9BC12B16169400B4F439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */; };
 		BA6E9BCC2B16169500B4F439 /* WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BCB2B16169500B4F439 /* WordsTests.swift */; };
@@ -40,7 +39,6 @@
 		BA6E9BB42B16169300B4F439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA6E9BB82B16169300B4F439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BA6E9BBB2B16169300B4F439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA6E9BBD2B16169400B4F439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA6E9BC02B16169400B4F439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA6E9BC22B16169400B4F439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +97,9 @@
 		BA6E9BB32B16169300B4F439 /* Words */ = {
 			isa = PBXGroup;
 			children = (
-				BA6E9BB42B16169300B4F439 /* AppDelegate.swift */,
-				BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */,
+				BA6E9BE42B16169D00B4F439 /* Application */,
+				BA6E9BE52B1616D300B4F439 /* Resources */,
 				BA6E9BB82B16169300B4F439 /* ViewController.swift */,
-				BA6E9BBA2B16169300B4F439 /* Main.storyboard */,
-				BA6E9BBD2B16169400B4F439 /* Assets.xcassets */,
-				BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */,
-				BA6E9BC22B16169400B4F439 /* Info.plist */,
 			);
 			path = Words;
 			sourceTree = "<group>";
@@ -125,6 +119,25 @@
 				BA6E9BD72B16169500B4F439 /* WordsUITestsLaunchTests.swift */,
 			);
 			path = WordsUITests;
+			sourceTree = "<group>";
+		};
+		BA6E9BE42B16169D00B4F439 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */,
+				BA6E9BB42B16169300B4F439 /* AppDelegate.swift */,
+				BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BA6E9BE52B1616D300B4F439 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA6E9BBD2B16169400B4F439 /* Assets.xcassets */,
+				BA6E9BC22B16169400B4F439 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +246,6 @@
 			files = (
 				BA6E9BC12B16169400B4F439 /* LaunchScreen.storyboard in Resources */,
 				BA6E9BBE2B16169400B4F439 /* Assets.xcassets in Resources */,
-				BA6E9BBC2B16169300B4F439 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BA6E9BBA2B16169300B4F439 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA6E9BBB2B16169300B4F439 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -368,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -425,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -444,12 +448,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMSA97M8U5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Words/Info.plist;
+				INFOPLIST_FILE = Words/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,12 +475,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMSA97M8U5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Words/Info.plist;
+				INFOPLIST_FILE = Words/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,7 +579,7 @@
 				BA6E9BDA2B16169500B4F439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BA6E9BDB2B16169500B4F439 /* Build configuration list for PBXNativeTarget "Words" */ = {
 			isa = XCConfigurationList;
@@ -586,7 +588,7 @@
 				BA6E9BDD2B16169500B4F439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BA6E9BDE2B16169500B4F439 /* Build configuration list for PBXNativeTarget "WordsTests" */ = {
 			isa = XCConfigurationList;
@@ -595,7 +597,7 @@
 				BA6E9BE02B16169500B4F439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		BA6E9BE12B16169500B4F439 /* Build configuration list for PBXNativeTarget "WordsUITests" */ = {
 			isa = XCConfigurationList;
@@ -604,7 +606,7 @@
 				BA6E9BE32B16169500B4F439 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
