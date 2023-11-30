@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class StartViewController: UIViewController {
-    private let viewModel = StartViewModel()
+    var viewModel: StartViewModeling!
 
     private lazy var buttonStack: UIStackView = {
         let stack = UIStackView()

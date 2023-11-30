@@ -23,6 +23,14 @@
 		BAC857982B17926100678558 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BAC857972B17926100678558 /* SnapKit */; };
 		BAC857992B1796D200678558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC8579A2B1796D200678558 /* LaunchScreen.storyboard */; };
 		BAC8579C2B18562F00678558 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8579B2B18562F00678558 /* Game.swift */; };
+		BAC857A32B185D3F00678558 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857A22B185D3F00678558 /* UserDefaultsManager.swift */; };
+		BAC857A62B185E3A00678558 /* WordProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857A52B185E3A00678558 /* WordProvider.swift */; };
+		BAC857A82B18614000678558 /* ManagerDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857A72B18614000678558 /* ManagerDependencies.swift */; };
+		BAC857AA2B1861EF00678558 /* ProviresDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857A92B1861EF00678558 /* ProviresDependencies.swift */; };
+		BAC857AC2B18627B00678558 /* ModuleDependenciesAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857AB2B18627B00678558 /* ModuleDependenciesAdapter.swift */; };
+		BAC857AE2B1865F400678558 /* StartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857AD2B1865F400678558 /* StartModule.swift */; };
+		BAC857B02B18696900678558 /* StartModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857AF2B18696900678558 /* StartModuleFactory.swift */; };
+		BAC857B22B186FE700678558 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857B12B186FE700678558 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,14 @@
 		BAC857942B17907400678558 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		BAC8579A2B1796D200678558 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAC8579B2B18562F00678558 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BAC857A22B185D3F00678558 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		BAC857A52B185E3A00678558 /* WordProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordProvider.swift; sourceTree = "<group>"; };
+		BAC857A72B18614000678558 /* ManagerDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDependencies.swift; sourceTree = "<group>"; };
+		BAC857A92B1861EF00678558 /* ProviresDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviresDependencies.swift; sourceTree = "<group>"; };
+		BAC857AB2B18627B00678558 /* ModuleDependenciesAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDependenciesAdapter.swift; sourceTree = "<group>"; };
+		BAC857AD2B1865F400678558 /* StartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModule.swift; sourceTree = "<group>"; };
+		BAC857AF2B18696900678558 /* StartModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModuleFactory.swift; sourceTree = "<group>"; };
+		BAC857B12B186FE700678558 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +161,7 @@
 				BAC8579A2B1796D200678558 /* LaunchScreen.storyboard */,
 				BA6E9BB42B16169300B4F439 /* AppDelegate.swift */,
 				BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */,
+				BAC857B12B186FE700678558 /* MainCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -173,6 +190,7 @@
 		BAC8577D2B1770E700678558 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BAC8579F2B185CF200678558 /* Core */,
 				BAC857902B17902D00678558 /* DesignComponents */,
 				BAC857832B1773C400678558 /* Model */,
 				BAC8577E2B1770ED00678558 /* Presentation */,
@@ -193,6 +211,8 @@
 		BAC8577F2B17710700678558 /* Start */ = {
 			isa = PBXGroup;
 			children = (
+				BAC857AD2B1865F400678558 /* StartModule.swift */,
+				BAC857AF2B18696900678558 /* StartModuleFactory.swift */,
 				BAC857812B17718300678558 /* StartViewController.swift */,
 				BAC857842B1773F200678558 /* StartViewModel.swift */,
 			);
@@ -225,9 +245,9 @@
 		BAC857902B17902D00678558 /* DesignComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BAC857912B17903B00678558 /* Button */,
 				BAC857932B17904600678558 /* Keyboard */,
 				BAC857922B17904000678558 /* TextField */,
-				BAC857912B17903B00678558 /* Button */,
 			);
 			path = DesignComponents;
 			sourceTree = "<group>";
@@ -252,6 +272,42 @@
 			children = (
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		BAC8579F2B185CF200678558 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857A12B185CFD00678558 /* DI */,
+				BAC857A02B185CF600678558 /* Managers */,
+				BAC857A42B185E3100678558 /* Providers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BAC857A02B185CF600678558 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857A22B185D3F00678558 /* UserDefaultsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BAC857A12B185CFD00678558 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857A72B18614000678558 /* ManagerDependencies.swift */,
+				BAC857A92B1861EF00678558 /* ProviresDependencies.swift */,
+				BAC857AB2B18627B00678558 /* ModuleDependenciesAdapter.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		BAC857A42B185E3100678558 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857A52B185E3A00678558 /* WordProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,9 +451,17 @@
 			files = (
 				BAC857952B17907400678558 /* Button.swift in Sources */,
 				BAC857852B1773F200678558 /* StartViewModel.swift in Sources */,
+				BAC857AE2B1865F400678558 /* StartModule.swift in Sources */,
 				BA6E9BB52B16169300B4F439 /* AppDelegate.swift in Sources */,
+				BAC857A82B18614000678558 /* ManagerDependencies.swift in Sources */,
 				BAC857822B17718300678558 /* StartViewController.swift in Sources */,
+				BAC857B02B18696900678558 /* StartModuleFactory.swift in Sources */,
+				BAC857A62B185E3A00678558 /* WordProvider.swift in Sources */,
 				BAC8578F2B17793500678558 /* ViewConfigurable.swift in Sources */,
+				BAC857B22B186FE700678558 /* MainCoordinator.swift in Sources */,
+				BAC857A32B185D3F00678558 /* UserDefaultsManager.swift in Sources */,
+				BAC857AA2B1861EF00678558 /* ProviresDependencies.swift in Sources */,
+				BAC857AC2B18627B00678558 /* ModuleDependenciesAdapter.swift in Sources */,
 				BA6E9BB72B16169300B4F439 /* SceneDelegate.swift in Sources */,
 				BA6E9BEF2B176D1300B4F439 /* Constants.swift in Sources */,
 				BAC8579C2B18562F00678558 /* Game.swift in Sources */,

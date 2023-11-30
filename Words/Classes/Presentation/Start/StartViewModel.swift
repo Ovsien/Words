@@ -7,8 +7,23 @@
 
 import Foundation
 
-final class StartViewModel {
+protocol StartViewModeling {
+    func isGameInProgress() -> Bool
+}
+
+final class StartViewModel: StartViewModeling {
+    weak var coordinator: Coordinator!
+    private weak var userDefaultsManager: (any UserDefaultsManaging)!
+
+    init(
+        coordinator: Coordinator,
+        userDefaultsManager: any UserDefaultsManaging
+    ) {
+        self.coordinator = coordinator
+        self.userDefaultsManager = userDefaultsManager
+    }
+
     func isGameInProgress() -> Bool {
-        return UserDefaults.standard.object(forKey: "CurrentGame") != nil
+        return userDefaultsManager.isGameSaved()
     }
 }
