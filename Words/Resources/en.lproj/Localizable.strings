@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Words
+
+  Created by Alexandr Ovsienko on 29.11.2023.
+  
+*/
+
+"startGame.button.title" = "Начать новую игру";
+"continueGame.button.title" = "Продолжить текущую игру";

@@ -9,14 +9,20 @@
 /* Begin PBXBuildFile section */
 		BA6E9BB52B16169300B4F439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB42B16169300B4F439 /* AppDelegate.swift */; };
 		BA6E9BB72B16169300B4F439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */; };
-		BA6E9BB92B16169300B4F439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB82B16169300B4F439 /* ViewController.swift */; };
 		BA6E9BBE2B16169400B4F439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BBD2B16169400B4F439 /* Assets.xcassets */; };
-		BA6E9BC12B16169400B4F439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */; };
 		BA6E9BCC2B16169500B4F439 /* WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BCB2B16169500B4F439 /* WordsTests.swift */; };
 		BA6E9BD62B16169500B4F439 /* WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BD52B16169500B4F439 /* WordsUITests.swift */; };
 		BA6E9BD82B16169500B4F439 /* WordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BD72B16169500B4F439 /* WordsUITestsLaunchTests.swift */; };
 		BA6E9BE72B16493D00B4F439 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BE62B16493D00B4F439 /* words.json */; };
 		BA6E9BEF2B176D1300B4F439 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BEE2B176D1300B4F439 /* Constants.swift */; };
+		BAC857822B17718300678558 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857812B17718300678558 /* StartViewController.swift */; };
+		BAC857852B1773F200678558 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857842B1773F200678558 /* StartViewModel.swift */; };
+		BAC857882B1775B900678558 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC8578A2B1775B900678558 /* Localizable.strings */; };
+		BAC8578F2B17793500678558 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8578E2B17793500678558 /* ViewConfigurable.swift */; };
+		BAC857952B17907400678558 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857942B17907400678558 /* Button.swift */; };
+		BAC857982B17926100678558 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BAC857972B17926100678558 /* SnapKit */; };
+		BAC857992B1796D200678558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC8579A2B1796D200678558 /* LaunchScreen.storyboard */; };
+		BAC8579C2B18562F00678558 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC8579B2B18562F00678558 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,9 +46,7 @@
 		BA6E9BB12B16169300B4F439 /* Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6E9BB42B16169300B4F439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BA6E9BB82B16169300B4F439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA6E9BBD2B16169400B4F439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA6E9BC02B16169400B4F439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA6E9BC22B16169400B4F439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6E9BC72B16169500B4F439 /* WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6E9BCB2B16169500B4F439 /* WordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTests.swift; sourceTree = "<group>"; };
@@ -52,6 +56,14 @@
 		BA6E9BE62B16493D00B4F439 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		BA6E9BE92B164AE300B4F439 /* inter-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "inter-medium.ttf"; sourceTree = "<group>"; };
 		BA6E9BEE2B176D1300B4F439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BAC857812B17718300678558 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		BAC857842B1773F200678558 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		BAC857892B1775B900678558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BAC8578C2B1775DC00678558 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BAC8578E2B17793500678558 /* ViewConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
+		BAC857942B17907400678558 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		BAC8579A2B1796D200678558 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAC8579B2B18562F00678558 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC857982B17926100678558 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				BA6E9BE42B16169D00B4F439 /* Application */,
+				BAC8577D2B1770E700678558 /* Classes */,
 				BA6E9BE52B1616D300B4F439 /* Resources */,
-				BA6E9BB82B16169300B4F439 /* ViewController.swift */,
 			);
 			path = Words;
 			sourceTree = "<group>";
@@ -129,7 +142,7 @@
 		BA6E9BE42B16169D00B4F439 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */,
+				BAC8579A2B1796D200678558 /* LaunchScreen.storyboard */,
 				BA6E9BB42B16169300B4F439 /* AppDelegate.swift */,
 				BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */,
 			);
@@ -144,6 +157,7 @@
 				BA6E9BBD2B16169400B4F439 /* Assets.xcassets */,
 				BA6E9BE82B164AD900B4F439 /* Fonts */,
 				BA6E9BEE2B176D1300B4F439 /* Constants.swift */,
+				BAC8578A2B1775B900678558 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -154,6 +168,90 @@
 				BA6E9BE92B164AE300B4F439 /* inter-medium.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BAC8577D2B1770E700678558 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857902B17902D00678558 /* DesignComponents */,
+				BAC857832B1773C400678558 /* Model */,
+				BAC8577E2B1770ED00678558 /* Presentation */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BAC8577E2B1770ED00678558 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8578D2B1778EA00678558 /* Protocols */,
+				BAC857802B17712A00678558 /* Game */,
+				BAC8577F2B17710700678558 /* Start */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BAC8577F2B17710700678558 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857812B17718300678558 /* StartViewController.swift */,
+				BAC857842B1773F200678558 /* StartViewModel.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		BAC857802B17712A00678558 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		BAC857832B1773C400678558 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8579B2B18562F00678558 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAC8578D2B1778EA00678558 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BAC8578E2B17793500678558 /* ViewConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BAC857902B17902D00678558 /* DesignComponents */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857932B17904600678558 /* Keyboard */,
+				BAC857922B17904000678558 /* TextField */,
+				BAC857912B17903B00678558 /* Button */,
+			);
+			path = DesignComponents;
+			sourceTree = "<group>";
+		};
+		BAC857912B17903B00678558 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857942B17907400678558 /* Button.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		BAC857922B17904000678558 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		BAC857932B17904600678558 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +270,9 @@
 			dependencies = (
 			);
 			name = Words;
+			packageProductDependencies = (
+				BAC857972B17926100678558 /* SnapKit */,
+			);
 			productName = Words;
 			productReference = BA6E9BB12B16169300B4F439 /* Words.app */;
 			productType = "com.apple.product-type.application";
@@ -237,13 +338,17 @@
 			};
 			buildConfigurationList = BA6E9BAC2B16169300B4F439 /* Build configuration list for PBXProject "Words" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = BA6E9BA82B16169300B4F439;
+			packageReferences = (
+				BAC857962B17926100678558 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BA6E9BB22B16169300B4F439 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,7 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA6E9BE72B16493D00B4F439 /* words.json in Resources */,
-				BA6E9BC12B16169400B4F439 /* LaunchScreen.storyboard in Resources */,
+				BAC857882B1775B900678558 /* Localizable.strings in Resources */,
+				BAC857992B1796D200678558 /* LaunchScreen.storyboard in Resources */,
 				BA6E9BBE2B16169400B4F439 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,10 +393,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6E9BB92B16169300B4F439 /* ViewController.swift in Sources */,
+				BAC857952B17907400678558 /* Button.swift in Sources */,
+				BAC857852B1773F200678558 /* StartViewModel.swift in Sources */,
 				BA6E9BB52B16169300B4F439 /* AppDelegate.swift in Sources */,
+				BAC857822B17718300678558 /* StartViewController.swift in Sources */,
+				BAC8578F2B17793500678558 /* ViewConfigurable.swift in Sources */,
 				BA6E9BB72B16169300B4F439 /* SceneDelegate.swift in Sources */,
 				BA6E9BEF2B176D1300B4F439 /* Constants.swift in Sources */,
+				BAC8579C2B18562F00678558 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,12 +437,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BA6E9BBF2B16169400B4F439 /* LaunchScreen.storyboard */ = {
+		BAC8578A2B1775B900678558 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BA6E9BC02B16169400B4F439 /* Base */,
+				BAC857892B1775B900678558 /* en */,
+				BAC8578C2B1775DC00678558 /* ru */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,6 +454,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -406,6 +518,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -627,6 +740,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BAC857962B17926100678558 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAC857972B17926100678558 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAC857962B17926100678558 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA6E9BA92B16169300B4F439 /* Project object */;
 }

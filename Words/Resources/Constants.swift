@@ -11,6 +11,10 @@ import UIKit
 typealias Fonts = Constants.Fonts
 typealias FontSize = Constants.FontSize
 typealias Colors = Constants.Colors
+typealias Spacing = Constants.Spacing
+typealias CornerRadius = Constants.CornerRadius
+typealias EdgesInset = Constants.EdgesInset
+typealias Height = Constants.Height
 
 public enum Constants {
     // MARK: - Fonts
@@ -24,6 +28,10 @@ public enum Constants {
         static let px40: CGFloat = 40
     }
 
+    enum Spacing {
+        static let px18: CGFloat = 12
+    }
+
     // MARK: - Colors
     enum Colors {
         static let absentBackgroundFieldColor: UIColor = UIColor(named: "AbsentBackgroundFieldColor")!
@@ -34,5 +42,18 @@ public enum Constants {
         static let primaryBackgroundColor: UIColor = UIColor(named: "PrimaryBackgroundColor")!
         static let rightPlaceBackgroundFieldColor: UIColor = UIColor(named: "RightPlaceBackgroundFieldColor")!
         static let wrongPlaceBackgroundFieldColor: UIColor = UIColor(named: "WrongPlaceBackgroundFieldColor")!
+    }
+
+    // MARK: - CornerRadius
+    enum CornerRadius {
+        static let px16: CGFloat = 16
+    }
+
+    enum EdgesInset {
+        static let px40: CGFloat = 40
+    }
+
+    enum Height {
+        static let px56: CGFloat = 56
     }
 }
