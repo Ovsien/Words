@@ -19,7 +19,7 @@ typealias Height = Constants.Height
 public enum Constants {
     // MARK: - Fonts
     enum Fonts {
-        static let inter_medium = "inter-medium"
+        static let inter_medium = "Inter-Medium"
     }
 
     // MARK: - Font Size
@@ -29,7 +29,8 @@ public enum Constants {
     }
 
     enum Spacing {
-        static let px18: CGFloat = 12
+        static let px18: CGFloat = 18
+        static let px6: CGFloat = 6
     }
 
     // MARK: - Colors
@@ -47,6 +48,7 @@ public enum Constants {
     // MARK: - CornerRadius
     enum CornerRadius {
         static let px16: CGFloat = 16
+        static let px4: CGFloat = 4
     }
 
     enum EdgesInset {

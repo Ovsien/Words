@@ -15,9 +15,13 @@ protocol Coordinator: AnyObject {
     func start()
 }
 
-protocol RootCoordinatorOutput: Coordinator { }
+protocol RootCoordinatorOutput: Coordinator { 
+    func transitionToNewGame()
+    func transitionToContinueGame()
+}
 
 final class RootCoordinator: RootCoordinatorOutput {
+
     var parentCoordinator: Coordinator?
     
     var childCoordinators: [Coordinator] = []
@@ -32,4 +36,18 @@ final class RootCoordinator: RootCoordinatorOutput {
         let viewController = StartModuleFactory().make(coordinator: self)
         navigationController.pushViewController(viewController, animated: false)
     }
+
+    // MARK: - Game
+    func transitionToNewGame() {
+        let viewController = GameModuleFactory().make(coordinator: self) as! GameViewController
+        viewController.viewModel.startNewGame()
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
+    func transitionToContinueGame() {
+        let viewController = GameModuleFactory().make(coordinator: self) as! GameViewController
+        viewController.viewModel.loadGame()
+        navigationController.pushViewController(viewController, animated: true)
+    }
+
 }

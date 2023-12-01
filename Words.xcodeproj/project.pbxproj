@@ -31,6 +31,15 @@
 		BAC857AE2B1865F400678558 /* StartModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857AD2B1865F400678558 /* StartModule.swift */; };
 		BAC857B02B18696900678558 /* StartModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857AF2B18696900678558 /* StartModuleFactory.swift */; };
 		BAC857B22B186FE700678558 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857B12B186FE700678558 /* MainCoordinator.swift */; };
+		BAC857B42B18796600678558 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857B32B18796600678558 /* TextField.swift */; };
+		BAC857B62B18957B00678558 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857B52B18957B00678558 /* GameViewController.swift */; };
+		BAC857B82B18958D00678558 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857B72B18958D00678558 /* GameViewModel.swift */; };
+		BAC857BA2B18980F00678558 /* GameModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857B92B18980F00678558 /* GameModule.swift */; };
+		BAC857BC2B18987900678558 /* GameModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857BB2B18987900678558 /* GameModuleFactory.swift */; };
+		BAC857BE2B18AC6000678558 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857BD2B18AC6000678558 /* Words.swift */; };
+		BAC857C12B18B0D700678558 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857C02B18B0D700678558 /* GameBoard.swift */; };
+		BAC857CB2B19015A00678558 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAC857C82B18FF5100678558 /* Inter-Medium.ttf */; };
+		BAC857CE2B19A19800678558 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC857CD2B19A19800678558 /* StackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +71,6 @@
 		BA6E9BD52B16169500B4F439 /* WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsUITests.swift; sourceTree = "<group>"; };
 		BA6E9BD72B16169500B4F439 /* WordsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA6E9BE62B16493D00B4F439 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
-		BA6E9BE92B164AE300B4F439 /* inter-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "inter-medium.ttf"; sourceTree = "<group>"; };
 		BA6E9BEE2B176D1300B4F439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BAC857812B17718300678558 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		BAC857842B1773F200678558 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
@@ -80,6 +88,15 @@
 		BAC857AD2B1865F400678558 /* StartModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModule.swift; sourceTree = "<group>"; };
 		BAC857AF2B18696900678558 /* StartModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModuleFactory.swift; sourceTree = "<group>"; };
 		BAC857B12B186FE700678558 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BAC857B32B18796600678558 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		BAC857B52B18957B00678558 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BAC857B72B18958D00678558 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		BAC857B92B18980F00678558 /* GameModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModule.swift; sourceTree = "<group>"; };
+		BAC857BB2B18987900678558 /* GameModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModuleFactory.swift; sourceTree = "<group>"; };
+		BAC857BD2B18AC6000678558 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		BAC857C02B18B0D700678558 /* GameBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		BAC857C82B18FF5100678558 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Inter-Medium.ttf"; path = "../../../../../../Downloads/Inter-4/extras/ttf/Inter-Medium.ttf"; sourceTree = "<group>"; };
+		BAC857CD2B19A19800678558 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,9 +188,9 @@
 			children = (
 				BA6E9BE62B16493D00B4F439 /* words.json */,
 				BA6E9BC22B16169400B4F439 /* Info.plist */,
+				BA6E9BEE2B176D1300B4F439 /* Constants.swift */,
 				BA6E9BBD2B16169400B4F439 /* Assets.xcassets */,
 				BA6E9BE82B164AD900B4F439 /* Fonts */,
-				BA6E9BEE2B176D1300B4F439 /* Constants.swift */,
 				BAC8578A2B1775B900678558 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -182,7 +199,7 @@
 		BA6E9BE82B164AD900B4F439 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				BA6E9BE92B164AE300B4F439 /* inter-medium.ttf */,
+				BAC857C82B18FF5100678558 /* Inter-Medium.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -222,6 +239,10 @@
 		BAC857802B17712A00678558 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				BAC857B92B18980F00678558 /* GameModule.swift */,
+				BAC857BB2B18987900678558 /* GameModuleFactory.swift */,
+				BAC857B52B18957B00678558 /* GameViewController.swift */,
+				BAC857B72B18958D00678558 /* GameViewModel.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -230,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC8579B2B18562F00678558 /* Game.swift */,
+				BAC857BD2B18AC6000678558 /* Words.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +267,8 @@
 		BAC857902B17902D00678558 /* DesignComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BAC857CC2B19A18100678558 /* StackVIew */,
+				BAC857BF2B18B0BC00678558 /* GameBoard */,
 				BAC857912B17903B00678558 /* Button */,
 				BAC857932B17904600678558 /* Keyboard */,
 				BAC857922B17904000678558 /* TextField */,
@@ -263,6 +287,7 @@
 		BAC857922B17904000678558 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				BAC857B32B18796600678558 /* TextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -308,6 +333,22 @@
 				BAC857A52B185E3A00678558 /* WordProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		BAC857BF2B18B0BC00678558 /* GameBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857C02B18B0D700678558 /* GameBoard.swift */,
+			);
+			path = GameBoard;
+			sourceTree = "<group>";
+		};
+		BAC857CC2B19A18100678558 /* StackVIew */ = {
+			isa = PBXGroup;
+			children = (
+				BAC857CD2B19A19800678558 /* StackView.swift */,
+			);
+			path = StackVIew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +464,7 @@
 			files = (
 				BA6E9BE72B16493D00B4F439 /* words.json in Resources */,
 				BAC857882B1775B900678558 /* Localizable.strings in Resources */,
+				BAC857CB2B19015A00678558 /* Inter-Medium.ttf in Resources */,
 				BAC857992B1796D200678558 /* LaunchScreen.storyboard in Resources */,
 				BA6E9BBE2B16169400B4F439 /* Assets.xcassets in Resources */,
 			);
@@ -452,9 +494,15 @@
 				BAC857952B17907400678558 /* Button.swift in Sources */,
 				BAC857852B1773F200678558 /* StartViewModel.swift in Sources */,
 				BAC857AE2B1865F400678558 /* StartModule.swift in Sources */,
+				BAC857BA2B18980F00678558 /* GameModule.swift in Sources */,
 				BA6E9BB52B16169300B4F439 /* AppDelegate.swift in Sources */,
+				BAC857B62B18957B00678558 /* GameViewController.swift in Sources */,
 				BAC857A82B18614000678558 /* ManagerDependencies.swift in Sources */,
+				BAC857C12B18B0D700678558 /* GameBoard.swift in Sources */,
+				BAC857BE2B18AC6000678558 /* Words.swift in Sources */,
 				BAC857822B17718300678558 /* StartViewController.swift in Sources */,
+				BAC857B42B18796600678558 /* TextField.swift in Sources */,
+				BAC857CE2B19A19800678558 /* StackView.swift in Sources */,
 				BAC857B02B18696900678558 /* StartModuleFactory.swift in Sources */,
 				BAC857A62B185E3A00678558 /* WordProvider.swift in Sources */,
 				BAC8578F2B17793500678558 /* ViewConfigurable.swift in Sources */,
@@ -462,8 +510,10 @@
 				BAC857A32B185D3F00678558 /* UserDefaultsManager.swift in Sources */,
 				BAC857AA2B1861EF00678558 /* ProviresDependencies.swift in Sources */,
 				BAC857AC2B18627B00678558 /* ModuleDependenciesAdapter.swift in Sources */,
+				BAC857B82B18958D00678558 /* GameViewModel.swift in Sources */,
 				BA6E9BB72B16169300B4F439 /* SceneDelegate.swift in Sources */,
 				BA6E9BEF2B176D1300B4F439 /* Constants.swift in Sources */,
+				BAC857BC2B18987900678558 /* GameModuleFactory.swift in Sources */,
 				BAC8579C2B18562F00678558 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

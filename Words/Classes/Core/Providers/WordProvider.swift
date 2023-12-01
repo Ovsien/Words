@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol WordProviding {
+protocol WordProviding: AnyObject {
     func loadWords() -> [String]?
 }
 
@@ -19,8 +19,8 @@ final class WordProvider: WordProviding {
 
         do {
             let data = try Data(contentsOf: url)
-            let words = try JSONDecoder().decode([String].self, from: data)
-            return words
+            let words = try JSONDecoder().decode(Words.self, from: data)
+            return words.words
         } catch {
             print("Error during JSON decoding:", error)
             return nil

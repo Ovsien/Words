@@ -28,6 +28,7 @@ final class ModuleDependenciesAdapter {
 extension ModuleDependenciesAdapter: ModuleDependenciesAdapterProtocol {
     func adapt() {
         StartModule.shared.dependencies = self
+        GameModule.shared.dependencies = self
     }
 }
 
@@ -46,4 +47,5 @@ extension ModuleDependenciesAdapter {
 }
 
 extension ModuleDependenciesAdapter:
-    StartModuleDependencies {}
+    StartModuleDependencies, 
+    GameModuleDependencies {}

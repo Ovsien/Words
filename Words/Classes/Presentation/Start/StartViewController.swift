@@ -11,6 +11,7 @@ import SnapKit
 final class StartViewController: UIViewController {
     var viewModel: StartViewModeling!
 
+    // MARK: - Views
     private lazy var buttonStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -41,20 +42,27 @@ final class StartViewController: UIViewController {
         )
     }()
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configureViewController()
     }
 
+    // MARK: - Functions
     @objc private func startGame() {
-        // Start a new game
+        viewModel.transitionToNewGame()
     }
 
     @objc private func continueGame() {
-        // Continue the current game
+        viewModel.transitionToContinueGame()
     }
 }
 
+// MARK: - View Configurable
 extension StartViewController: ViewConfigurable {
     func setupUI() {
         view.backgroundColor = UIColor(resource: .primaryBackground)

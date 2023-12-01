@@ -9,15 +9,17 @@ import Foundation
 
 protocol StartViewModeling {
     func isGameInProgress() -> Bool
+    func transitionToNewGame()
+    func transitionToContinueGame()
 }
 
 final class StartViewModel: StartViewModeling {
-    weak var coordinator: Coordinator!
-    private weak var userDefaultsManager: (any UserDefaultsManaging)!
+    private weak var coordinator: RootCoordinatorOutput!
+    private weak var userDefaultsManager: UserDefaultsManaging!
 
     init(
-        coordinator: Coordinator,
-        userDefaultsManager: any UserDefaultsManaging
+        coordinator: RootCoordinatorOutput,
+        userDefaultsManager: UserDefaultsManaging
     ) {
         self.coordinator = coordinator
         self.userDefaultsManager = userDefaultsManager
@@ -25,5 +27,13 @@ final class StartViewModel: StartViewModeling {
 
     func isGameInProgress() -> Bool {
         return userDefaultsManager.isGameSaved()
+    }
+
+    func transitionToNewGame() {
+        coordinator.transitionToNewGame()
+    }
+
+    func transitionToContinueGame() {
+        coordinator.transitionToContinueGame()
     }
 }
