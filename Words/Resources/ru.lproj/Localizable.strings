@@ -6,5 +6,6 @@
   
 */
 
+"gameScreen.title" = "5 букв";
 "startGame.button.title" = "Начать новую игру";
 "continueGame.button.title" = "Продолжить текущую игру";

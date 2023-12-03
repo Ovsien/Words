@@ -16,6 +16,7 @@ protocol Coordinator: AnyObject {
 }
 
 protocol RootCoordinatorOutput: Coordinator { 
+    func transitionToBack()
     func transitionToNewGame()
     func transitionToContinueGame()
 }
@@ -38,6 +39,10 @@ final class RootCoordinator: RootCoordinatorOutput {
     }
 
     // MARK: - Game
+    func transitionToBack() {
+        navigationController.popViewController(animated: true)
+    }
+
     func transitionToNewGame() {
         let viewController = GameModuleFactory().make(coordinator: self) as! GameViewController
         viewController.viewModel.startNewGame()

@@ -10,6 +10,7 @@
 		BA1F6DF62B1C3E7F00F35260 /* CustomKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F6DF52B1C3E7F00F35260 /* CustomKeyboard.swift */; };
 		BA1F6DF82B1C84DF00F35260 /* ActionKeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F6DF72B1C84DF00F35260 /* ActionKeyboardButton.swift */; };
 		BA1F6DFA2B1CAAF800F35260 /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F6DF92B1CAAF800F35260 /* KeyboardButton.swift */; };
+		BA1F6DFD2B1CB62C00F35260 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F6DFC2B1CB62C00F35260 /* CustomNavigationBar.swift */; };
 		BA6E9BB52B16169300B4F439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB42B16169300B4F439 /* AppDelegate.swift */; };
 		BA6E9BB72B16169300B4F439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */; };
 		BA6E9BBE2B16169400B4F439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6E9BBD2B16169400B4F439 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		BA1F6DF52B1C3E7F00F35260 /* CustomKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyboard.swift; sourceTree = "<group>"; };
 		BA1F6DF72B1C84DF00F35260 /* ActionKeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionKeyboardButton.swift; sourceTree = "<group>"; };
 		BA1F6DF92B1CAAF800F35260 /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		BA1F6DFC2B1CB62C00F35260 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		BA6E9BB12B16169300B4F439 /* Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Words.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6E9BB42B16169300B4F439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA6E9BB62B16169300B4F439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA1F6DFB2B1CB61400F35260 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				BA1F6DFC2B1CB62C00F35260 /* CustomNavigationBar.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
 		BA6E9BA82B16169300B4F439 = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +283,7 @@
 		BAC857902B17902D00678558 /* DesignComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BA1F6DFB2B1CB61400F35260 /* NavigationBar */,
 				BAC857CC2B19A18100678558 /* StackVIew */,
 				BAC857BF2B18B0BC00678558 /* GameBoard */,
 				BAC857912B17903B00678558 /* Button */,
@@ -520,6 +531,7 @@
 				BAC8578F2B17793500678558 /* ViewConfigurable.swift in Sources */,
 				BAC857B22B186FE700678558 /* MainCoordinator.swift in Sources */,
 				BAC857A32B185D3F00678558 /* UserDefaultsManager.swift in Sources */,
+				BA1F6DFD2B1CB62C00F35260 /* CustomNavigationBar.swift in Sources */,
 				BAC857AA2B1861EF00678558 /* ProviresDependencies.swift in Sources */,
 				BAC857AC2B18627B00678558 /* ModuleDependenciesAdapter.swift in Sources */,
 				BAC857B82B18958D00678558 /* GameViewModel.swift in Sources */,

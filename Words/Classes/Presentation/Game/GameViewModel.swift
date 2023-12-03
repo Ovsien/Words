@@ -8,6 +8,7 @@
 import Foundation
 
 protocol GameViewModeling: AnyObject {
+    func backButtonTapped()
     func startNewGame()
     func loadGame()
     func handleInput(_ input: String)
@@ -16,18 +17,22 @@ protocol GameViewModeling: AnyObject {
 final class GameViewModel: GameViewModeling {
     private var game: Game?
 
-    private weak var coordinator: Coordinator!
+    private weak var coordinator: RootCoordinatorOutput!
     private weak var wordProvider: WordProviding!
     private weak var userDefaultsManager: UserDefaultsManaging!
 
     init(
-        coordinator: Coordinator!,
+        coordinator: RootCoordinatorOutput!,
         wordProvider: WordProviding!,
         userDefaultsManager: UserDefaultsManaging!
     ) {
         self.coordinator = coordinator
         self.wordProvider = wordProvider
         self.userDefaultsManager = userDefaultsManager
+    }
+
+    func backButtonTapped() {
+        coordinator.transitionToBack()
     }
 
         func startNewGame() {
