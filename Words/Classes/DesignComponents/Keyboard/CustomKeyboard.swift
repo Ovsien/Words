@@ -6,15 +6,20 @@
 //
 
 import UIKit
+import Combine
 
 final class CustomKeyboard: UIView {
+
+    let keyTappedSubject = PassthroughSubject<String, Never>()
+    let deleteButtonTappedSubject = PassthroughSubject<Void, Never>()
+    let checkButtonTappedSubject = PassthroughSubject<Void, Never>()
 
     private let keys: [[String]] = [
         ["й", "ц", "у", "к", "е", "н", "г", "ш", "щ", "з", "х", "ъ"],
         ["ф", "ы", "в", "а", "п", "р", "о", "л", "д", "ж", "э"],
         ["я", "ч", "с", "м", "и", "т", "ь", "б", "ю"]
     ]
-    
+
     private let keyHeight: CGFloat = 40
     private let spacing: CGFloat = 5
     private let padding: CGFloat = 16
@@ -121,14 +126,15 @@ final class CustomKeyboard: UIView {
     }
     
     @objc private func keyTapped(_ sender: UIButton) {
-        // Handle key tap event
+        guard let key = sender.titleLabel?.text else { return }
+        keyTappedSubject.send(key)
     }
     
     @objc private func checkButtonTapped() {
-        // Handle left button tap event
+        checkButtonTappedSubject.send(())
     }
     
     @objc private func deleteeButtonTapped() {
-        // Handle right button tap event
+        deleteButtonTappedSubject.send(())
     }
 }

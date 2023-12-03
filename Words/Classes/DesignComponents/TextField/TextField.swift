@@ -43,7 +43,6 @@ final class TextField: UITextField {
     @objc private func textFieldDidChange() {
         if let text = text, !text.isEmpty {
             activeNextField.send(tag)
-            resignFirstResponder()
         }
     }
 

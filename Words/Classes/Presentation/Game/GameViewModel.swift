@@ -11,7 +11,7 @@ protocol GameViewModeling: AnyObject {
     func backButtonTapped()
     func startNewGame()
     func loadGame()
-    func handleInput(_ input: String)
+    func handleInput(_ input: [String])
 }
 
 final class GameViewModel: GameViewModeling {
@@ -51,7 +51,7 @@ final class GameViewModel: GameViewModeling {
         game = userDefaultsManager.loadGame()
     }
 
-    func handleInput(_ input: String) {
+    func handleInput(_ input: [String]) {
         
     }
 }

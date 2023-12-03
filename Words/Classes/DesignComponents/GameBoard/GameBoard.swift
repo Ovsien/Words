@@ -10,9 +10,13 @@ import SnapKit
 import Combine
 
 final class GameBoard: UIView {
-    private var textFields: [[TextField]] = []
+    var textFields: [[TextField]] = []
+    let enteredLettersSubject = PassthroughSubject<[String], Never>()
+
+
     private var subscriptions = Set<AnyCancellable>()
     private weak var viewModel: GameViewModeling!
+    private var enteredLetters: [String] = []
 
     private lazy var mainStack: StackView = {
         StackView(
@@ -45,6 +49,9 @@ final class GameBoard: UIView {
             let rowFields = createRow(numberOfRows: numberOfRows)
             textFields.append(rowFields)
         }
+
+        textFields.flatMap { $0 }.forEach { $0.isEnabled = false }
+        textFields.first?.first?.isEnabled = true
     }
 
     private func createRow(numberOfRows: Int) -> [TextField] {
@@ -90,6 +97,46 @@ final class GameBoard: UIView {
         )
         textField.inputView = customKeyboard
 
+        customKeyboard.keyTappedSubject
+            .sink { [weak self, weak textField] key in
+                if tag % 5 == 4, !(textField?.text?.isEmpty ?? true) {
+                    print("Буква введена в 5 поле")
+                } else {
+                    textField?.text = key.uppercased()
+                    self?.enteredLetters.append(key.uppercased())
+                    if let enteredLetters = self?.enteredLetters {
+                        self?.enteredLettersSubject.send(enteredLetters)
+                    }
+                    if tag < self?.textFields.count ?? 0 - 1 {
+                        self?.activateTextField(at: tag + 1)
+                    }
+                }
+            }
+            .store(in: &subscriptions)
+
+        customKeyboard.deleteButtonTappedSubject
+            .sink { [weak self] _ in
+                let textFieldIndex = self?.enteredLetters.count ?? 0
+                let rowIndex = textFieldIndex / 5
+                let columnIndex = textFieldIndex % 5
+                if self?.textFields[rowIndex][columnIndex].text?.isEmpty == false {
+                    self?.textFields[rowIndex][columnIndex].text = ""
+                } else if !(self?.enteredLetters.isEmpty)! {
+                    self?.enteredLetters.removeLast()
+                    if let enteredLetters = self?.enteredLetters {
+                        self?.enteredLettersSubject.send(enteredLetters)
+                    }
+                    self?.activateTextField(at: textFieldIndex - 1)
+                }
+            }
+            .store(in: &subscriptions)
+
+        customKeyboard.checkButtonTappedSubject
+            .sink { [weak self] _ in
+                self?.viewModel.handleInput(self!.enteredLetters)
+            }
+            .store(in: &subscriptions)
+
         textField.activeNextField.sink { [weak self] tag in
             self?.activateTextField(at: tag + 1)
         }.store(in: &subscriptions)
@@ -102,7 +149,13 @@ final class GameBoard: UIView {
     }
 
     private func activateTextField(at tag: Int) {
-        let textField = textFields.flatMap { $0 }.first { $0.tag == tag }
+        textFields.flatMap { $0 }.forEach { $0.isEnabled = false }
+        let adjustedTag = tag % textFields.count
+        let textField = textFields.flatMap { $0 }.first { $0.tag == adjustedTag }
+        textField?.isEnabled = true
+        textField?.activeNextField.sink { [weak self] tag in
+            self?.activateTextField(at: tag + 1)
+        }.store(in: &subscriptions)
         textField?.text = ""
         textField?.becomeFirstResponder()
         shakeTextField(textField)
@@ -122,7 +175,6 @@ extension GameBoard: UITextFieldDelegate {
         let currentText = textField.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-        viewModel.handleInput(updatedText)
         return updatedText.count <= 1
     }
 }
