@@ -20,8 +20,8 @@ final class StartViewController: UIViewController {
         return stack
     }()
 
-    private lazy var startButton: Button = {
-        Button(
+    private lazy var startButton: PrimaryButton = {
+        PrimaryButton(
             title: NSLocalizedString(
                 "startGame.button.title",
                 comment: ""
@@ -31,8 +31,8 @@ final class StartViewController: UIViewController {
         )
     }()
 
-    private lazy var continueButton: Button = {
-        Button(
+    private lazy var continueButton: PrimaryButton = {
+        PrimaryButton(
             title: NSLocalizedString(
                 "continueGame.button.title",
                 comment: ""

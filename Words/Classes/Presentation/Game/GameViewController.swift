@@ -33,7 +33,6 @@ extension GameViewController: ViewConfigurable {
         gameBoard.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(16)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(81)
-//            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(81)
         }
     }
 

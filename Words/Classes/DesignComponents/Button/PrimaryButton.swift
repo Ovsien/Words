@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Button: UIButton {
+class PrimaryButton: UIButton {
     init(title: String, action: Selector, target: Any) {
         super.init(frame: .zero)
         configureButton()

@@ -24,13 +24,15 @@ public enum Constants {
 
     // MARK: - Font Size
     enum FontSize {
+        static let px16: CGFloat = 16
         static let px18: CGFloat = 18
         static let px40: CGFloat = 40
     }
 
     enum Spacing {
-        static let px18: CGFloat = 18
+        static let px5: CGFloat = 5
         static let px6: CGFloat = 6
+        static let px18: CGFloat = 18
     }
 
     // MARK: - Colors
@@ -47,8 +49,8 @@ public enum Constants {
 
     // MARK: - CornerRadius
     enum CornerRadius {
-        static let px16: CGFloat = 16
         static let px4: CGFloat = 4
+        static let px16: CGFloat = 16
     }
 
     enum EdgesInset {

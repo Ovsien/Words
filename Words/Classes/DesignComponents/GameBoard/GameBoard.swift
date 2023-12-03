@@ -41,7 +41,7 @@ final class GameBoard: UIView {
             make.edges.equalToSuperview()
         }
 
-        for _ in 0..<numberOfColumns {
+        (0..<numberOfColumns).forEach { _ in
             let rowFields = createRow(numberOfRows: numberOfRows)
             textFields.append(rowFields)
         }
@@ -66,6 +66,12 @@ final class GameBoard: UIView {
     }
 
     private func createTextField(tag: Int) -> TextField {
+        let rowHeight: CGFloat = 40
+        let numberOfRows: CGFloat = 3
+        let spacing: CGFloat = 5
+        let safeAreaInset: CGFloat = 46
+        let keyboardHeight = numberOfRows * rowHeight + (numberOfRows - 1) * spacing + safeAreaInset
+
         let textField = TextField(
             tag: tag,
             delegate: self
@@ -73,6 +79,16 @@ final class GameBoard: UIView {
         textField.snp.makeConstraints { make in
             make.width.equalTo(textField.snp.height)
         }
+
+        let customKeyboard = CustomKeyboard(
+            frame: CGRect(
+                x: 0,
+                y: 0,
+                width: self.frame.width,
+                height: keyboardHeight
+            )
+        )
+        textField.inputView = customKeyboard
 
         textField.activeNextField.sink { [weak self] tag in
             self?.activateTextField(at: tag + 1)
@@ -96,7 +112,7 @@ final class GameBoard: UIView {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: .linear)
         animation.duration = 0.6
-        animation.values = [-5.0, 5.0, -5.0, 5.0, -2.5, 2.5, -1.5, 1.5, 0.0 ]
+        animation.values = [-2.5, 2.5, -2.5, 2.5, -1.0, 1.0, -0.5, 0.5, 0.0 ]
         textField?.layer.add(animation, forKey: "shake")
     }
 }

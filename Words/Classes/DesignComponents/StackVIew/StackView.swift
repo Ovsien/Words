@@ -9,11 +9,13 @@ import UIKit
 
 final class StackView: UIStackView {
     init(
+        alignment: Alignment = .fill,
         axis: NSLayoutConstraint.Axis = .horizontal,
         spacing: CGFloat,
         distribution: UIStackView.Distribution
     ) {
         super.init(frame: .zero)
+        self.alignment = alignment
         self.axis = axis
         self.spacing = spacing
         self.distribution = distribution
